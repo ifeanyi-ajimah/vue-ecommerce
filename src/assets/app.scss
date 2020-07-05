@@ -1,0 +1,13 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import './admin.scss';
+@import './admintheme.scss';
+
+body{
+    font-family: 'Nunito', sans-serif !important ;
+}
+
+.custom-btn{
+    padding: 0.5rem 2.5rem;
+}
+

@@ -1,14 +1,36 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Homemain from '../views/Homemain.vue'
+import About from '../views/About.vue'
+import Contact from '../views/Contact.vue'
+
+import Admin from '../views/Admin.vue'
+import Overview from '../views/Overview.vue'
+import Products from '../views/Products.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    component: Home,
+    children:[
+      {path: '', name: 'homemain', component: Homemain },
+      {path: 'about', name: 'about', component: About },
+      {path: 'contact', name: 'contact', component: Contact }
+    ]
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: Admin,
+    children:[
+      { path: "overview", name: 'overview', component: Overview },
+      { path: "products", name: 'products', component: Products},
+
+    ]
   },
   {
     path: '/about',
@@ -27,3 +49,9 @@ const router = new VueRouter({
 })
 
 export default router
+
+
+
+// N/B: When using nested routes, DO NOT preceed the path of the nested route with / 
+// Always ensure to add a / before the parent component 
+//

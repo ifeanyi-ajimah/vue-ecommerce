@@ -248,7 +248,7 @@
 
 <script>
 export default {
-  name: 'admin-addproduct',
+  name: 'addproducts',
   props: {
     msg: String
   }

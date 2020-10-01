@@ -741,7 +741,7 @@
 
 <script>
 export default {
-  name: 'gulladminhomeff',
+  name: 'adminhome',
   props: {
     msg: String
   }

@@ -6,7 +6,8 @@ import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 
 import Admin from '../views/Admin.vue'
-import Overview from '../views/Overview.vue'
+import Adminhome from '../components/Gulladminhome.vue'
+import Adminaddproduct from '../components/GullAdminAddProduct.vue'
 import Products from '../views/Products.vue'
 
 Vue.use(VueRouter)
@@ -27,8 +28,8 @@ Vue.use(VueRouter)
     name: 'admin',
     component: Admin,
     children:[
-      { path: "overview", name: 'overview', component: Overview },
-      { path: "products", name: 'products', component: Products},
+      { path: '', name: 'adminhome', component: Adminhome },
+      { path: 'addproducts', name: 'addproducts', component: Adminaddproduct},
 
     ]
   },
@@ -40,6 +41,7 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
+
 ]
 
 const router = new VueRouter({

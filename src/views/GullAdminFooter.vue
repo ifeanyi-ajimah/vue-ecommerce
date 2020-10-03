@@ -4,7 +4,7 @@
                     <div class="col-md-9">
                         <p><strong>Gull - Laravel + Bootstrap 4 admin template</strong></p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero quis beatae officia saepe perferendis voluptatum minima eveniet voluptates dolorum, temporibus nisi maxime nesciunt totam repudiandae commodi sequi dolor quibusdam
-                            <sunt></sunt>
+                        
                         </p>
                     </div>
                 </div>

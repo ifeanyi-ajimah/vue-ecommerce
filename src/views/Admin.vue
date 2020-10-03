@@ -1,5 +1,7 @@
 <template>
  
+
+    
  <div class="app-admin-wrap layout-sidebar-large">
 
         <!--==========  Navbar Start   ==========-->
@@ -40,19 +42,24 @@ export default {
         Adminfooter, Gullsidebar, Gullnavbar 
   }, 
   methods:{
-      
-      closeSideMenu(){
-        $(".page-wrapper").toggleClass("toggled");
-      }
+
+      // closeSideMenu(){
+      //   $(".page-wrapper").toggleClass("toggled");
+      // }
 
   }
 }
 </script>
 
-<style lang="stylus" >
+<style lang="css" >
 
-
-  
+/* 
+    <link href="src/assets/gull/dist-assets/css/themes/lite-purple.min.css" rel="stylesheet" />
+    <link href="src/assets/gull/dist-assets/css/plugins/perfect-scrollbar.min.css" rel="stylesheet" /> */
+    
+/* 
+    @import '../assets/gull/dist-assets/css/themes/lite-purple.min.css';
+    @import '../assets/gull/dist-assets/css/plugins/perfect-scrollbar.min.css'; */
 
 </style>
 

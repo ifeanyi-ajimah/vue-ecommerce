@@ -20,7 +20,8 @@ Vue.use(VueRouter)
     children:[
       {path: '', name: 'homemain', component: Homemain },
       {path: 'about', name: 'about', component: About },
-      {path: 'contact', name: 'contact', component: Contact }
+      {path: 'contact', name: 'contact', component: Contact },
+      
     ]
   },
   
@@ -31,6 +32,7 @@ Vue.use(VueRouter)
     children:[
       { path: '', name: 'adminhome', component: Adminhome },
       { path: 'addproducts', name: 'addproducts', component: Adminaddproduct},
+      // { path: '*', name: 'adminhome', component: Adminhome},
 
     ]
   }
@@ -44,7 +46,7 @@ Vue.use(VueRouter)
   //   // which is lazy-loaded when the route is visited.
   //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   // }
-  
+
 
 ]
 

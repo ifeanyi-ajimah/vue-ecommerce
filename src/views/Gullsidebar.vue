@@ -9,12 +9,16 @@
                     <li class="nav-item" ><router-link to="/admin/addproducts" class="nav-item-hold" ><i class="nav-icon i-Library"></i><span class="nav-text"> Add Product </span></router-link>
                         <div class="triangle"></div>
                     </li>
-                    <li class="nav-item" data-item="extrakits"><a class="nav-item-hold" href="#"><i class="nav-icon i-Suitcase"></i><span class="nav-text">Extra kits</span></a>
+                    <li class="nav-item" ><router-link to="/admin/overview" class="nav-item-hold" ><i class="nav-icon i-Suitcase"></i><span class="nav-text"> Over View</span></router-link>
                         <div class="triangle"></div>
                     </li>
-                    <li class="nav-item" data-item="apps"><a class="nav-item-hold" href="#"><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Apps</span></a>
+                    <li class="nav-item" ><router-link to="/admin/products" class="nav-item-hold" ><i class="nav-icon i-Suitcase"></i><span class="nav-text"> Products  </span></router-link>
                         <div class="triangle"></div>
                     </li>
+                    <li class="nav-item" ><a class="nav-item-hold" @click="logout" ><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Logout</span></a>
+                        <div class="triangle"></div>
+                    </li>
+<!--                     
                     <li class="nav-item" data-item="widgets"><a class="nav-item-hold" href="#"><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Widgets</span></a>
                         <div class="triangle"></div>
                     </li>
@@ -35,7 +39,7 @@
                     </li>
                     <li class="nav-item"><a class="nav-item-hold" href="http://demos.ui-lib.com/gull-html-doc/" target="_blank"><i class="nav-icon i-Safe-Box1"></i><span class="nav-text">Doc</span></a>
                         <div class="triangle"></div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="sidebar-left-secondary rtl-ps-none" data-perfect-scrollbar="" data-suppress-scroll-x="true">
@@ -97,24 +101,7 @@
                     <li class="nav-item"><a href="tour.html"><i class="nav-icon i-Plane"></i><span class="item-name">User Tour</span></a></li>
                     <li class="nav-item"><a href="upload.html"><i class="nav-icon i-Data-Upload"></i><span class="item-name">Upload</span></a></li>
                 </ul>
-                <ul class="childNav" data-parent="uikits">
-                    <li class="nav-item"><a href="alerts.html"><i class="nav-icon i-Bell1"></i><span class="item-name">Alerts</span></a></li>
-                    <li class="nav-item"><a href="accordion.html"><i class="nav-icon i-Split-Horizontal-2-Window"></i><span class="item-name">Accordion</span></a></li>
-                    <li class="nav-item"><a href="badges.html"><i class="nav-icon i-Medal-2"></i><span class="item-name">Badges</span></a></li>
-                    <li class="nav-item"><a href="buttons.html"><i class="nav-icon i-Cursor-Click"></i><span class="item-name">Buttons</span></a></li>
-                    <li class="nav-item"><a href="cards.html"><i class="nav-icon i-Line-Chart-2"></i><span class="item-name">Cards</span></a></li>
-                    <li class="nav-item"><a href="card.metrics.html"><i class="nav-icon i-ID-Card"></i><span class="item-name">Card Metrics</span></a></li>
-                    <li class="nav-item"><a href="carousel.html"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Carousels</span></a></li>
-                    <li class="nav-item"><a href="lists.html"><i class="nav-icon i-Belt-3"></i><span class="item-name">Lists</span></a></li>
-                    <li class="nav-item"><a href="pagination.html"><i class="nav-icon i-Arrow-Next"></i><span class="item-name">Paginations</span></a></li>
-                    <li class="nav-item"><a href="popover.html"><i class="nav-icon i-Speach-Bubble-2"></i><span class="item-name">Popover</span></a></li>
-                    <li class="nav-item"><a href="progressbar.html"><i class="nav-icon i-Loading"></i><span class="item-name">Progressbar</span></a></li>
-                    <li class="nav-item"><a href="tables.html"><i class="nav-icon i-File-Horizontal-Text"></i><span class="item-name">Tables</span></a></li>
-                    <li class="nav-item"><a href="tabs.html"><i class="nav-icon i-New-Tab"></i><span class="item-name">Tabs</span></a></li>
-                    <li class="nav-item"><a href="tooltip.html"><i class="nav-icon i-Speach-Bubble-8"></i><span class="item-name">Tooltip</span></a></li>
-                    <li class="nav-item"><a href="modals.html"><i class="nav-icon i-Duplicate-Window"></i><span class="item-name">Modals</span></a></li>
-                    <li class="nav-item"><a href="nouislider.html"><i class="nav-icon i-Width-Window"></i><span class="item-name">Sliders</span></a></li>
-                </ul>
+             
                 <ul class="childNav" data-parent="sessions">
                     <li class="nav-item"><a href="../sessions/signin.html"><i class="nav-icon i-Checked-User"></i><span class="item-name">Sign in</span></a></li>
                     <li class="nav-item"><a href="../sessions/signup.html"><i class="nav-icon i-Add-User"></i><span class="item-name">Sign up</span></a></li>
@@ -132,11 +119,25 @@
 </template>
 
 <script>
+ import {fb} from '../firebase'
 export default {
   name: 'sample',
   props: {
     msg: String
+  },
+  methods:{
+      logout(){
+          fb.auth().signOut()
+          .then( () => {
+              this.$router.replace('/');
+          })
+          .catch( (err) => {
+              console.log(err);
+          });
+           
+      }
   }
+
 }
 </script>
 

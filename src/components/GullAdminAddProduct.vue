@@ -1,6 +1,6 @@
 <template>
     
-     <div class="row admin-addproduct ">
+     <div class="row addproducts ">
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
@@ -52,7 +52,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
+                    <!-- <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="card-title mb-3">Form Inputs Rounded</div>
@@ -101,8 +101,9 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
+                    </div> -->
+                    
+                    <!-- <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="card-title">Switch</div>
@@ -129,8 +130,9 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
+                    </div> -->
+
+                    <!-- <div class="col-md-6">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="card-title">Checkbox Default</div>
@@ -157,8 +159,9 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
+                    </div> -->
+
+                    <!-- <div class="col-md-6">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="card-title">Checkbox Outline</div>
@@ -185,8 +188,9 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
+                    </div> -->
+
+                    <!-- <div class="col-md-6">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="card-title">Radio Button</div>
@@ -213,8 +217,9 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
+                    </div> -->
+
+                    <!-- <div class="col-md-6">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="card-title">Radio Button Outline</div>
@@ -241,7 +246,8 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+
                 </div>
 
 </template>

@@ -42,7 +42,8 @@ export default {
         Adminfooter, Gullsidebar, Gullnavbar 
   }, 
   methods:{
-
+      
+      //you can add jQuery to you view this way.
       // closeSideMenu(){
       //   $(".page-wrapper").toggleClass("toggled");
       // }

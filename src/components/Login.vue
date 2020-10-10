@@ -40,7 +40,7 @@
                             <h5 class="text-center">Login Please</h5>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" v-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <input type="email" v-model="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                 <small class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
@@ -124,7 +124,23 @@ export default {
         }, 
 
         login(){
+                fb.auth().signInWithEmailAndPassword(this.email, this.password)
+                    .then( () =>{
 
+                        $('#loginModal').modal('hide');
+                        this.$router.replace('admin');
+                    })
+                    .catch(function(error) {
+                        // Handle Errors here.
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        if (errorCode === 'auth/wrong-password') {
+                            alert('Wrong password.');
+                        } else {
+                            alert(errorMessage);
+                        }
+                        console.log(error);
+                        });
         }
 
     },

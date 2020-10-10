@@ -11,17 +11,81 @@
           
         </div>
       </div>
+      <hr>
+      <h2> Create Read  Delete and Update </h2>
+      <div class="row justify-content-center align-content-center">
+
+          <div class="col-md-12">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="card-title mb-3">Products Inputs</div>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group mb-3">
+                                            <label for="firstName1"> Product name</label>
+                                            <input class="form-control" v-model="product.name" id="firstName1" type="text" placeholder="Enter product name " />
+                                        </div>
+                                        <div class="col-md-12 form-group mb-3">
+                                            <label for="lastName1"> Product Price </label>
+                                            <input class="form-control" v-model="product.price" id="lastName1" type="text" placeholder="Enter product price" />
+                                        </div>
+
+                                        <!-- <div class="col-md-12 form-group mb-3">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input class="form-control" id="exampleInputEmail1" type="email" placeholder="Enter email" />
+                                            <!--  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --
+                                        </div> -->
+                                     
+
+                                        <div class="col-md-12">
+                                            <button @click.prevent="saveData" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+      </div>
     </div>
 
   </div>
 </template>
 
 <script>
+
+import {fb, db} from '../firebase';
 export default {
   name: 'products',
   props: {
     msg: String
+  },
+  data(){
+    return{
+      product :{
+        name : '',
+        price : ''
+      }
+    }
+
+  },
+  methods:{
+
+      saveData(){
+        db.collection("Products").add( this.product )
+          .then((docRef) => {   // ensure to always use fat arrow function in your promise, so that you can be able to call other functions using the this keyword
+              this.reset();
+              console.log("Document written with ID: ", docRef.id);
+          })
+          .catch(function(error) {
+              console.error("Error adding document: ", error);
+          });
+      },
+      reset(){
+        Object.assign(this.$data, this.$options.data.apply(this));
+      }
   }
+
 }
 </script>
 

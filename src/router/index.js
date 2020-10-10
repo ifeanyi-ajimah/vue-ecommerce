@@ -84,4 +84,18 @@ export default router
 
 // N/B: When using nested routes, DO NOT preceed the path of the nested route with / 
 // Always ensure to add a / before the parent component 
-//
+
+
+// router.beforeEach((to, from, next) =>{
+//   const requiresAuth = to.matched.some(x => x.meta.requiresAuth)
+//   const currentUser = fb.auth().currentUser
+
+//   if(requiresAuth && !currentUser){
+// 	next('/login')
+// }else if (requiresAuth && currentUser){
+// 	next()
+// }else {
+// 	next()
+// }
+// })
+

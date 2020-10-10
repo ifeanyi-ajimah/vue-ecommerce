@@ -12,16 +12,20 @@
                     <li class="nav-item" ><router-link to="/admin/overview" class="nav-item-hold" ><i class="nav-icon i-Suitcase"></i><span class="nav-text"> Over View</span></router-link>
                         <div class="triangle"></div>
                     </li>
+                    <!-- <li class="nav-item" ><a class="nav-item-hold" @click="logout" ><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Logout</span></a>
+                        <div class="triangle"></div>
+                    </li> -->
                     <li class="nav-item" ><router-link to="/admin/products" class="nav-item-hold" ><i class="nav-icon i-Suitcase"></i><span class="nav-text"> Products  </span></router-link>
                         <div class="triangle"></div>
                     </li>
                     <li class="nav-item" ><a class="nav-item-hold" @click="logout" ><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Logout</span></a>
                         <div class="triangle"></div>
                     </li>
-<!--                     
+                                         
                     <li class="nav-item" data-item="widgets"><a class="nav-item-hold" href="#"><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Widgets</span></a>
                         <div class="triangle"></div>
                     </li>
+                    <!--
                     <li class="nav-item" data-item="charts"><a class="nav-item-hold" href="#"><i class="nav-icon i-File-Clipboard-File--Text"></i><span class="nav-text">Charts</span></a>
                         <div class="triangle"></div>
                     </li>
@@ -120,6 +124,7 @@
 
 <script>
  import {fb} from '../firebase'
+
 export default {
   name: 'sample',
   props: {

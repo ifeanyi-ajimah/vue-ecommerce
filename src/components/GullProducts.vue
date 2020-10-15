@@ -47,9 +47,9 @@
       </div>
       <hr>
    <h2> Products </h2>
-      <div class="row justify-content-center">
+      <div class="row table-responsive ">
            
-            <table>
+            <table class="table">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -65,6 +65,7 @@
                 </tr>
               </tbody>
             </table>
+
       </div>
     </div>
 
@@ -94,19 +95,21 @@ export default {
   methods:{
 
       saveData(){
-        db.collection("Products").add( this.product )
+        db.collection("Products").add( this.product ) //saves the data to the db ie adds this.product from input fields to db
           .then((docRef) => {   // ensure to always use fat arrow function in your promise, so that you can be able to call other functions using the this keyword
              
-            this.getData();
-              // console.log( docRef );
-              //  this.reset();
+              
+               this.products.push(this.product);
+                 this.product = ''; // clear form 
+                
               // console.log("Document written with ID: ", docRef.id);
           })
           .catch(function(error) {
               console.error("Error adding document: ", error);
           });
       },
-      reset(){
+
+      reset(){  //this functin resets form 
         Object.assign(this.$data, this.$options.data.apply(this));
       },
 

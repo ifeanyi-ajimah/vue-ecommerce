@@ -1,7 +1,7 @@
 <template>
     
-     <div class="row addproducts ">
-                    <div class="col-md-12">
+     <div class="row addproducts  justify-content-center">
+                    <div class="col-md-8">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="card-title mb-3">Form Inputs</div>

@@ -4,14 +4,18 @@ import router from './router'
 import store from './store'
 import jQuery from 'jquery';
 import {fb} from './firebase'
+import VueFirestore from 'vue-firestore'
 
+
+Vue.use(VueFirestore)
 window.$ = window.jQuery = jQuery;
 
-
-
+import Swal from 'sweetalert';
 import 'popper.js';
 import 'bootstrap';
 import './assets/app.scss' //imports all the css files . but css files has to be imported into the app.scss file
+
+window.swal = Swal
 
 Vue.component('Navbar', require('./components/Navbar.vue').default); //.default appends the component name to the imported component
 Vue.config.productionTip = false;

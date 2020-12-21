@@ -5,7 +5,7 @@
  <div class="app-admin-wrap layout-sidebar-large">
 
         <!--==========  Navbar Start   ==========-->
-        <Gullnavbar> </Gullnavbar>
+        <Gullnavbar :email="email" @log-user-out="logout" > </Gullnavbar>
         <!--==========  Navbar End    ==========-->
         
 
@@ -32,35 +32,53 @@
 
 <script>
 // @ is an alias to /src
+import {fb} from '../firebase'
 import Adminfooter from '@/views/GullAdminFooter.vue'
 import Gullsidebar from '@/views/Gullsidebar.vue'
 import Gullnavbar from '@/views/Gullnavbar.vue'
 
 export default {
   name: 'admin',
+  data(){
+      return{
+          name: null,
+          email: ''
+      }
+  },
   components: {
         Adminfooter, Gullsidebar, Gullnavbar 
   }, 
-  methods:{
-      
-      //you can add jQuery to you view this way.
-      // closeSideMenu(){
-      //   $(".page-wrapper").toggleClass("toggled");
-      // }
 
+  methods:{
+
+       logout(){
+          fb.auth().signOut()
+          .then( () => {
+              this.$router.replace('/');
+          })
+          .catch( (err) => {
+              console.log(err);
+          }); 
+      },
+
+      // closeSideMenu(){
+      //   $(".page-wrapper").toggleClass("toggled"); } //this is how you can add jQuery to your component.
+
+  }, 
+  mounted(){
+      var user = fb.auth().currentUser;
+      if(user){
+          this.email = user.email
+      }
+      
   }
+
 }
 </script>
 
 <style lang="css" >
 
-/* 
-    <link href="src/assets/gull/dist-assets/css/themes/lite-purple.min.css" rel="stylesheet" />
-    <link href="src/assets/gull/dist-assets/css/plugins/perfect-scrollbar.min.css" rel="stylesheet" /> */
-    
-/* 
-    @import '../assets/gull/dist-assets/css/themes/lite-purple.min.css';
-    @import '../assets/gull/dist-assets/css/plugins/perfect-scrollbar.min.css'; */
+
 
 </style>
 

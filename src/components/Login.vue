@@ -89,7 +89,7 @@
 </template>
 
 <script>
-    import {fb} from '../firebase'
+    import {fb,db} from '../firebase'
 
 export default {
   name: 'login',
@@ -107,7 +107,21 @@ export default {
         register(){
             fb.auth().createUserWithEmailAndPassword(this.email, this.password) 
                 .then( (user) => {
-                    $('#loginModal').modal('hide')
+                    $('#loginModal').modal('hide');
+
+                    //add the profile collection as user registers
+                    db.collection("profiles").doc(user.user.uid).set({
+                        name: this.name,
+                     
+                    })
+                    .then(function() {
+                        console.log("Document successfully written!");
+                    })
+                    .catch(function(error) {
+                        console.error("Error writing document: ", error);
+                    });
+                    
+                    //route to the admin page
                     this.$router.replace('admin');
                 } )
                 .catch(function(error) {

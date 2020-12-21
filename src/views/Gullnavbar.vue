@@ -11,7 +11,7 @@
             </div>
             <div class="d-flex align-items-center">
                 <!-- Mega menu -->
-                <div class="dropdown mega-menu d-none d-md-block">
+                <!-- <div class="dropdown mega-menu d-none d-md-block">
                     <a href="#" class="btn text-muted dropdown-toggle mr-3" id="dropdownMegaMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mega Menu</a>
                     <div class="dropdown-menu text-left" aria-labelledby="dropdownMenuButton">
                         <div class="row m-0">
@@ -52,7 +52,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- / Mega menu -->
                 <div class="search-bar">
                     <input type="text" placeholder="Search">
@@ -64,7 +64,7 @@
                 <!-- Full screen toggle -->
                 <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen></i>
                 <!-- Grid menu Dropdown -->
-                <div class="dropdown">
+                <!-- <div class="dropdown">
                     <i class="i-Safe-Box text-muted header-icon" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <div class="menu-icon-grid">
@@ -76,7 +76,7 @@
                             <a href="#"><i class="i-Ambulance"></i> Support</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Notificaiton -->
                 <div class="dropdown">
                     <div class="badge-top-container" role="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -147,14 +147,17 @@
                 <!-- User avatar dropdown -->
                 <div class="dropdown">
                     <div class="user col align-self-end">
-                        <!-- <img src="../../dist-assets/images/faces/1.jpg" id="userDropdown" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+                        <img src="../../public/gull/dist-assets/images/faces/1.jpg" id="userDropdown" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        
+                        
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                            <div class="dropdown-header">
+
+                            <!-- <div class="dropdown-header">
                                 <i class="i-Lock-User mr-1"></i> Timothy Carlson
-                            </div>
-                            <a class="dropdown-item">Account settings</a>
-                            <a class="dropdown-item">Billing history</a>
-                            <a class="dropdown-item" href="signin.html">Sign out</a>
+                            </div>-->
+                            <a class="dropdown-item"> name : </a>
+                            <a class="dropdown-item"> email: <small> {{ email }} </small> </a> 
+                            <a class="dropdown-item" @click="logoutMeOut"  href="#">Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -165,11 +168,17 @@
 </template>
 
 <script>
+
 export default {
-  name: 'sample',
-  props: {
-    msg: String
+  name: 'main-header',
+
+  props: ['email'],
+    methods:{
+      logoutMeOut(){
+         this.$emit('log-user-out')
+      }
   }
+  
 }
 </script>
 

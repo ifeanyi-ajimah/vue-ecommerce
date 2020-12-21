@@ -9,7 +9,7 @@
                     <li class="nav-item" ><router-link to="/admin/addproducts" class="nav-item-hold" ><i class="nav-icon i-Library"></i><span class="nav-text"> Add Product </span></router-link>
                         <div class="triangle"></div>
                     </li>
-                    <li class="nav-item" ><router-link to="/admin/overview" class="nav-item-hold" ><i class="nav-icon i-Suitcase"></i><span class="nav-text"> Over View</span></router-link>
+                    <li class="nav-item" ><router-link to="/admin/profile" class="nav-item-hold" ><i class="nav-icon i-Suitcase"></i><span class="nav-text"> Profiles </span></router-link>
                         <div class="triangle"></div>
                     </li>
                     <!-- <li class="nav-item" ><a class="nav-item-hold" @click="logout" ><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Logout</span></a>

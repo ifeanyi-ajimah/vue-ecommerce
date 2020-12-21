@@ -8,7 +8,7 @@ import Contact from '../views/Contact.vue'
 import Admin from '../views/Admin.vue'
 import Adminhome from '../components/Gulladminhome.vue'
 import Adminaddproduct from '../components/GullAdminAddProduct.vue'
-import Overview from '../components/GullOverview.vue'
+import Profile from '../components/GullProfile.vue'
 import Products from '../components/GullProducts.vue'
 
 import {fb} from '../firebase'
@@ -37,7 +37,7 @@ Vue.use(VueRouter)
     children:[
       { path: '', name: 'adminhome', component: Adminhome },
       { path: 'addproducts', name: 'addproducts', component: Adminaddproduct},
-      { path: 'overview', name: 'overview', component: Overview},
+      { path: 'profile', name: 'profile', component: Profile},
       { path: 'products', name: 'products', component: Products},
       // { path: '*', name: 'adminhome', component: Adminhome},
 

@@ -7,6 +7,7 @@ import {fb} from './firebase'
 import VueFirestore from 'vue-firestore'
 
 
+//firestore and jquery 
 Vue.use(VueFirestore)
 window.$ = window.jQuery = jQuery;
 

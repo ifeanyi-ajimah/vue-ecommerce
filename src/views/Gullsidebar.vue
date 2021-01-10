@@ -6,9 +6,7 @@
                     <li class="nav-item" ><router-link to="/admin" class="nav-item-hold" href="#"><i class="nav-icon i-Bar-Chart"></i><span class="nav-text">Dashboard</span></router-link>
                         <div class="triangle"></div>
                     </li>
-                    <li class="nav-item" ><router-link to="/admin/addproducts" class="nav-item-hold" ><i class="nav-icon i-Library"></i><span class="nav-text"> Add Product </span></router-link>
-                        <div class="triangle"></div>
-                    </li>
+                   
                     <li class="nav-item" ><router-link to="/admin/profile" class="nav-item-hold" ><i class="nav-icon i-Suitcase"></i><span class="nav-text"> Profiles </span></router-link>
                         <div class="triangle"></div>
                     </li>
@@ -16,6 +14,9 @@
                         <div class="triangle"></div>
                     </li> -->
                     <li class="nav-item" ><router-link to="/admin/products" class="nav-item-hold" ><i class="nav-icon i-Suitcase"></i><span class="nav-text"> Products  </span></router-link>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" ><router-link to="/admin/orders" class="nav-item-hold" ><i class="nav-icon i-Library"></i><span class="nav-text"> Orders  </span></router-link>
                         <div class="triangle"></div>
                     </li>
                     <li class="nav-item" ><a class="nav-item-hold" @click="logout" ><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Logout</span></a>

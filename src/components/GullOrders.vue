@@ -8,7 +8,6 @@
         </div>
         <div class="col-md-6">
           <img src="../../public/gull/svg/products.svg" alt=""  >
-          
         </div>
       </div>
       <hr>

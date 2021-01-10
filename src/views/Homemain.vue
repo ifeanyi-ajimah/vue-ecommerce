@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <Banner> </Banner>
-    <Products> </Products>
+    <Products :theProducts="products"> </Products>
     <Learn> </Learn> 
   </div>
 </template>
@@ -12,15 +12,30 @@
 import Banner from '@/components/Banner.vue'
 import Products from '@/sections/Products.vue'
 import Learn from '@/sections/Learn.vue'
+import {fb, db} from '../firebase'
 
 export default {
   name: 'homemain',
-    components: {
+
+  components: {
    Banner, Products, Learn
   },
   props: {
     msg: String
-  }
+  },
+
+  data(){
+    return{
+        products: [],
+    }
+  },
+
+    firestore(){
+      return{
+          products: db.collection('products'),
+      }
+  },
+
 }
 </script>
 

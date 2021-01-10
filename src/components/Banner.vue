@@ -5,7 +5,7 @@
               <div class="col-md-5">
                   <div class="banner-content">
                       <h1 class="banner-title">
-                          Vue Shop For Devs Only
+                          Vue Shop For Devs Only 
                       </h1>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adip . Lorem ipsum dolor sit amet consectetur adip . Quios

@@ -2,9 +2,10 @@
   <div class="home">
     
    <Navbar> </Navbar>
+   <Minicart></Minicart>
    <router-view> </router-view>
 
-   <!-- <footer></footer> -->
+   <footer></footer>
   </div>
 </template>
 

@@ -10,9 +10,14 @@ import Adminhome from '../components/Gulladminhome.vue'
 import Adminaddproduct from '../components/GullAdminAddProduct.vue'
 import Profile from '../components/GullProfile.vue'
 import Products from '../components/GullProducts.vue'
+import Orders from '../components/GullOrders.vue'
 
+import Vue2Filters from 'vue2-filters'
 import {fb} from '../firebase'
 
+
+
+Vue.use(Vue2Filters)
 Vue.use(VueRouter)
 
   const routes = [
@@ -25,7 +30,6 @@ Vue.use(VueRouter)
       {path: '', name: 'homemain', component: Homemain },
       {path: 'about', name: 'about', component: About },
       {path: 'contact', name: 'contact', component: Contact },
-      
     ]
   },
   
@@ -39,6 +43,7 @@ Vue.use(VueRouter)
       { path: 'addproducts', name: 'addproducts', component: Adminaddproduct},
       { path: 'profile', name: 'profile', component: Profile},
       { path: 'products', name: 'products', component: Products},
+      {path:   'orders',  name: 'orders', component: Orders},
       // { path: '*', name: 'adminhome', component: Adminhome},
 
     ]

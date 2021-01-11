@@ -22,7 +22,8 @@
             <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <a class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</a>
-            <a class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#loginModal">Login</a>
+            <a class="btn btn-outline-success ml-1 my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#loginModal">Login</a>
+            <a class="btn  my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#mini-cart-modal"> <i class="fas fa-shopping-cart"></i> </a>
             </form>
         </div>
         <Login></Login>

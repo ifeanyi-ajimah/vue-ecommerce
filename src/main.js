@@ -22,6 +22,7 @@ window.swal = Swal
 
 Vue.component('Navbar', require('./components/Navbar.vue').default); //.default appends the component name to the imported component
 Vue.component('Minicart', require('./components/MiniCart.vue').default);
+Vue.component('Checkout', require('./views/Checkout.vue').default);
 Vue.config.productionTip = false;
 
 //codes before vue instantiation are to check for authentication of user before redering

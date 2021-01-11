@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Homemain from '../views/Homemain.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
+import Checkout from '../views/Checkout.vue'
 
 import Admin from '../views/Admin.vue'
 import Adminhome from '../components/Gulladminhome.vue'
@@ -30,6 +31,7 @@ Vue.use(VueRouter)
       {path: '', name: 'homemain', component: Homemain },
       {path: 'about', name: 'about', component: About },
       {path: 'contact', name: 'contact', component: Contact },
+      {path: 'checkout', name: 'checkout', component: Checkout}
     ]
   },
   

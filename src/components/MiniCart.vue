@@ -24,7 +24,7 @@
             <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-secondary"  data-dismiss="modal">Continue Shopping</button> -->
                 <button type="button" class="btn btn-secondary"  @click="closeModal">Continue Shopping</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" @click="goToCheckOut" class="btn btn-primary"> Check Out </button>
             </div>
             </div>
         </div>
@@ -42,6 +42,11 @@ export default {
   methods:{
       closeModal(){
           this.$store.commit('closeModal');
+      },
+      goToCheckOut(){
+        this.$store.commit('openCheckoutPage')
+        this.$router.push('/checkout')
+        // this.$router.replace({ path: 'checkout' })
       }
   }
 }
